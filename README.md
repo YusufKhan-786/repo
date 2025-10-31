@@ -1,16 +1,9 @@
-# GitHub Pages Site with Custom 404
+# <REPO_NAME>
 
-This repository demonstrates a GitHub Pages site with a creative custom 404 error page.
+Simple GitHub Pages demo with a custom 404 page.
 
-## Features
-- ✨ Modern, gradient-based design
-- 🎨 Animated elements for better user engagement
-- 📱 Responsive layout
-- 🔄 Custom 404 error handling
-- 📧 Contact information included
+## Files
+- `index.html` — home page
+- `404.html` — custom 404 page (contains contact email)
 
-## Contact
-Email: 24f1000396@ds.study.iitm.ac.in
-
-## Testing
-Visit any non-existent page to see the custom 404 page in action!
+Contact: 24f1000396@ds.study.iitm.ac.in
