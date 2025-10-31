@@ -1,114 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Page Not Found</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Page not found</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      overflow: hidden;
-    }
-    .container {
-      text-align: center;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      animation: slideIn 0.5s ease-out;
-    }
-    h1 {
-      font-size: 150px;
-      color: #fff;
-      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-      margin-bottom: 20px;
-      animation: bounce 2s infinite;
-    }
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2em;
-      margin: 15px 0;
-      line-height: 1.6;
-    }
-    .suggestions {
-      margin: 30px 0;
-      text-align: left;
-      display: inline-block;
-    }
-    .suggestions li {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 40px;
-      background: white;
-      color: #f5576c;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
-    }
-    a:hover {
-      transform: scale(1.1);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    }
-    .emoji {
-      font-size: 80px;
-      display: block;
-      margin-bottom: 20px;
-      animation: spin 3s ease-in-out infinite;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    @keyframes spin {
-      0%, 100% { transform: rotate(0deg); }
-      25% { transform: rotate(-10deg); }
-      75% { transform: rotate(10deg); }
-    }
+    :root { --accent: #ff6b6b; --muted: #6b7280; }
+    body { font-family: Inter, Arial, sans-serif; margin:0; display:flex; min-height:100vh; align-items:center; justify-content:center; background:#f8fafc; color:#111827; }
+    .card { background:white; padding:36px; border-radius:12px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); max-width:760px; width:96%; text-align:left; }
+    .big { font-size:96px; line-height:1; color:var(--accent); float:left; margin-right:18px; }
+    h2 { margin-top:0; margin-bottom:6px; }
+    p { color:var(--muted); margin:8px 0 18px; }
+    .actions { margin-top:18px; }
+    a.btn { display:inline-block; padding:10px 16px; border-radius:8px; text-decoration:none; border:1px solid #d1d5db; color:#111827; }
+    a.primary { background:var(--accent); color:white; border-color:var(--accent); margin-right:8px; }
+    .hint { font-size:13px; color:#9ca3af; margin-top:12px; }
+    .contact { margin-top:14px; font-size:14px; }
+    @media (max-width:560px) { .big { display:block; float:none; margin:0 0 12px; font-size:72px; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <span class="emoji">🔍</span>
-    <h1>404</h1>
-    <h2>Oops! Page Not Found</h2>
-    <p>The page you're looking for seems to have vanished into thin air!</p>
-    
-    <div class="suggestions">
-      <p><strong>Here's what you can do:</strong></p>
-      <ul>
-        <li>✅ Check the URL for typos</li>
-        <li>✅ Go back to the home page</li>
-        <li>✅ Contact us if you think this is an error</li>
-      </ul>
+  <div class="card" role="main" aria-labelledby="title">
+    <div style="overflow:hidden;">
+      <div class="big" aria-hidden="true">404</div>
+      <div>
+        <h2 id="title">Oops — we couldn't find that page</h2>
+        <p>It looks like the page you tried to visit was moved, deleted, or never existed. Here are a few things you can do:</p>
+        <ul>
+          <li>Return to the homepage to continue browsing.</li>
+          <li>Check the URL for typos.</li>
+          <li>If you followed an old link, try the site search (if available) or contact the site owner below.</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn primary" href="/">← Back to Home</a>
+          <a class="btn" href="javascript:history.back()">Go back</a>
+        </div>
+
+        <div class="contact">
+          <p>Need help? Contact: <!--email_off-->24f1000396@ds.study.iitm.ac.in<!--/email_off--></p>
+        </div>
+
+        <div class="hint">Tip: You can verify this 404 page by visiting a non-existent path under the site, e.g. <code>/nonexistent-page</code>.</div>
+      </div>
     </div>
-    
-    <p>📧 Contact: <strong>24f1000396@ds.study.iitm.ac.in</strong></p>
-    <a href="/">← Go Back Home</a>
   </div>
 </body>
 </html>
